@@ -2,33 +2,33 @@ Filename: profiler_memoryprofiler.py
 
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
-     5     27.9 MiB     27.9 MiB           1   @profile
+     5     27.7 MiB     27.7 MiB           1   @profile
      6                                         def slow_function():
-     7     27.9 MiB      0.0 MiB           1       time.sleep(2)
-     8     27.9 MiB      0.0 MiB           1       total = 0
-     9     28.1 MiB      0.0 MiB       10001       for i in range(10000):
-    10     28.1 MiB      0.2 MiB       10000           total += i ** 2
-    11     28.1 MiB      0.0 MiB           1       return total
+     7     27.7 MiB      0.0 MiB           1       time.sleep(2)
+     8     27.7 MiB      0.0 MiB           1       total = 0
+     9     27.7 MiB      0.0 MiB       10001       for i in range(10000):
+    10     27.7 MiB      0.0 MiB       10000           total += i ** 2
+    11     27.7 MiB      0.0 MiB           1       return total
 
 
 Filename: profiler_memoryprofiler.py
 
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
-    14     28.1 MiB     28.1 MiB           1   @profile
+    14     27.7 MiB     27.7 MiB           1   @profile
     15                                         def optimized_fast_function():
-    16     28.1 MiB      0.0 MiB         203       return sum(i**2 for i in range(100))
+    16     27.7 MiB      0.0 MiB         203       return sum(i**2 for i in range(100))
 
 
 Filename: profiler_memoryprofiler.py
 
 Line #    Mem usage    Increment  Occurrences   Line Contents
 =============================================================
-    19     28.1 MiB     28.1 MiB           1   @profile
+    19     27.7 MiB     27.7 MiB           1   @profile
     20                                         def memory_intensive_function():
-    21     28.1 MiB      0.0 MiB           1       total = 0
-    22     28.2 MiB -79834210.9 MiB    10000001       for i in range(10000000):
-    23     28.2 MiB -79834204.2 MiB    10000000           total += i ** 2
-    24     15.0 MiB    -13.1 MiB           1       return total
+    21     27.7 MiB      0.0 MiB           1       total = 0
+    22     27.9 MiB -55119527.6 MiB    10000001       for i in range(10000000):
+    23     27.9 MiB -55119524.5 MiB    10000000           total += i ** 2
+    24     21.6 MiB     -6.3 MiB           1       return total
 
 
