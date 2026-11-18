@@ -1,0 +1,31 @@
+test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function)
+Test the memory_intensive_function and monitor memory usage. ... FAIL
+test_optimized_fast_function (test_profiler.TestProfiler.test_optimized_fast_function)
+Test the optimized_fast_function for execution time. ... ok
+test_slow_function (test_profiler.TestProfiler.test_slow_function)
+Test the slow_function for execution time. ... ok
+
+======================================================================
+FAIL: test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function)
+Test the memory_intensive_function and monitor memory usage.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/majdayash/Desktop/lab9_Majd_Ayash/after_optimization/test_profiler.py", line 38, in test_memory_intensive_function
+    self.assertGreater(mem_usage_after[0], mem_usage_before[0],
+AssertionError: 37.390625 not greater than 37.390625 : Memory usage should increase after running memory_intensive_function.
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.908s
+
+FAILED (failures=1)
+memory_intensive_function executed in 0.69 seconds.
+Memory usage before: 37.39 MiB, after: 37.39 MiB.
+optimized_fast_function executed in 0.00 seconds.
+slow_function executed in 2.01 seconds.
+----- coverage report -m -----
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+profiler.py           20      4    80%   24-26, 30
+test_profiler.py      30      2    93%   43, 47
+------------------------------------------------
+TOTAL                 50      6    88%
